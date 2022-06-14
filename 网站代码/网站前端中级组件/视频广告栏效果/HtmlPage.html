@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+ 
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.2.js"></script>
+    <script src="js/banner.js"></script>
+
+
+
+    <style> 
+         
+        
+         div {
+            display: block;
+        }
+
+        .slideBox {
+            position: relative;
+            margin-top: 20px;
+            z-index: 2;
+            height: 700px;
+            overflow: hidden;
+            width: 1200px;
+            
+        }
+
+             .hd {
+                 margin-top:260px;
+                height: 30px;
+                left: 0;
+                position: absolute;
+                text-align: center;
+                top: 405px;
+                width: 100%;
+                z-index: 20;
+                overflow: hidden;
+               
+            }
+
+                 .hd .smallUl {
+                    height: 30px;
+                    width: 200px;
+                    line-height: 30px;
+                    margin: 0 auto;
+                    position: relative;
+                    z-index: 21;
+                    text-align: center;
+                    opacity: 0.8;
+                    -webkit-border-radius: 20px;
+                }
+
+        .clearfix::after, ul::after, li::after {
+            display: block;
+            content: ".";
+            height: 0;
+            visibility: hidden;
+            clear: both;
+            font-size: 0;
+            line-height: 0;
+        }
+
+         .hd .smallUl li {
+            margin-top: 8px;
+            background: #000000;
+            border-radius: 50%;
+            box-shadow: 0 0 3px;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            zoom: 1;
+            height: 15px;
+            margin-right: 10px;
+            opacity: 0.8;
+            width: 15px;
+            font-size: 0px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+         .hd ul li.on {
+            background: #CC0000;
+            color: #ffffff;
+            filter: alpha(opacity=80);
+            opacity: 0.8;
+        }
+
+        .slideBox .bd {
+            position: relative;
+            height: 100%;
+            z-index: 0;
+        }
+
+            .slideBox .bd li {
+                zoom: 1;
+                vertical-align: middle;
+            }
+
+        .slideBox .prev {
+            position: absolute;
+            left: 3%;
+            top: 50%;
+            margin-top: -25px;
+            display: block;
+            width: 50px;
+            height: 60px;
+            opacity: 0.3;
+            z-index: 1111;
+            background: url(img/slider-arrow.png) -100px 15px no-repeat #000000;
+        }
+
+        .slideBox .next {
+            position: absolute;
+            left: 93%;
+            top: 50%;
+            margin-top: -25px;
+            display: block;
+            width: 50px;
+            height: 60px;
+            opacity: 0.3;
+            z-index: 1111;
+            background: url(img/slider-arrow.png) 15px 15px no-repeat #000000;
+        }
+
+
+
+        .sildeBox .next {
+            left: auto;
+            right: 3%;
+            background-position: 15px 15px;
+        }
+
+        .sildeBox .prev:hover, .slideBox .next:hover {
+            filter: alpha(opacity=70);
+            opacity: 1;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            color: #232323;
+            font-size: 12px;
+            font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, STHeiti;
+            letter-spacing: 0px;
+            height: 100%;
+            width: 100%;
+        }
+
+        div, ul, li {
+            border: 0px;
+            margin: 0px;
+    
+            outline: 0px;
+            padding: 0px;
+        }
+        
+
+        ul {
+            list-style: none outside none;
+        }
+
+        a {
+            color: #333;
+        }
+         .yu {
+            box-shadow: 0 0 6px 5px #808080;
+            margin: 20px auto;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+     <div id="slideBox" class="slideBox yu">
+       
+       
+        <div class="bd">
+            <ul>
+                <li style="display: none;">
+                    <a href="#" target="_blank">
+                        <video class="side-down-video" autoplay="" loop="" muted="" >
+                            <source src="music/7.mp4" type="video/mp4" >
+                        </video>
+                        </a>
+                </li>
+                <li style="display: none;">
+                    <a href="#" target="_blank">
+                        <video class="side-down-video" autoplay="" loop="" muted="" >
+                            <source src="music/2.mp4" type="video/mp4" >
+                        </video>
+                    </a>
+                </li>
+                <li style="display: none;">
+                    <a href="#" target="_blank">
+                        <video class="side-down-video" autoplay="" loop="" muted=""  >
+                            <source src="music/8.mp4" type="video/mp4"  >
+                        </video>
+                    </a>
+                </li>
+                <li style="display: none;">
+                    <a href="#" target="_blank">
+                      <video class="side-down-video" autoplay="" loop="" muted="" >
+                            <source src="music/5.mp4" type="video/mp4" >
+                        </video>
+                    </a>
+                </li>
+                <li style="display: list-item; opacity: 0.940464;">
+                    <a href="#" target="_blank">
+                        <video class="side-down-video" autoplay="" loop="" muted="" >
+                            <source src="music/6.mp4" type="video/mp4" >
+                        </video>
+                    </a>
+                </li>
+            </ul>
+        </div>
+          <div class="hd">
+            <ul class="smallUl">
+                <li class="">1</li>
+                <li class="">2</li>
+                <li class="">3</li>
+                <li class="">4</li>
+                <li class="on">5</li>
+            </ul>
+        </div>
+        <a href="#" class="prev"></a>
+        <a href="#" class="next"></a>
+    </div>
+</body>
+</html>
