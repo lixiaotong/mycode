@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+
+body{
+  margin: 0; /*外边距*/
+  padding: 0; /*内边距*/
+  display: flex; /*弹性盒模型*/
+  justify-content: center; /*主轴对齐方式*/
+  align-items: center; /*交叉轴对齐方式*/
+  height: 100vh; /*高度*/
+  background-color: #000; /*背景颜色*/
+  font-family: 'Bad Script', cursive; /*字体*/
+}
+h1{
+  margin: 0;
+  padding: 0;
+  color: #111; /*字体颜色*/
+  font-size: 16em; /*字体大小*/
+}
+h1 span {
+  margin: 0;
+  padding: 0;
+  animation: animate 2s linear infinite; /*动画: name 2s 线性播放 循环*/
+  user-select: none; /**/
+}
+
+@keyframes animate{ /*动画*/
+  0%,100%{
+    color: #fff;
+    filter: blur(2px); /*过渡:模糊*/
+    text-shadow:  /*字体阴影*/
+    0 0 10px #00bcff,
+    0 0 20px #00b3ff,
+    0 0 40px #00b3ff,
+    0 0 80px #00b3ff,
+    0 0 120px #00b3ff,
+    0 0 200px #00b3ff,
+    0 0 300px #00b3ff,
+    0 0 400px #00b3ff;
+  }
+  5%,95%{
+    color: #111;
+    filter: blur(0px);
+    text-shadow: none;
+  }
+}
